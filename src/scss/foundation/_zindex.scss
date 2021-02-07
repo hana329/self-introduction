@@ -1,0 +1,51 @@
+$z-map: (
+  footer: true,
+  base: true,
+  main: true,
+  header: true,
+  side: true,
+  overlay: true,
+  　modal: true,
+  　loading: true,
+  child: (
+    first,
+    second,
+    third,
+  ),
+);
+
+// z-index
+@function z($name, $childname: 0) {
+  $getkey: map-get($z-map, $name);
+  @if $childname != 0 {
+    @return index($getkey, $childname);
+  }
+  @return inspect(index($z-map, ($name $getkey)));
+}
+
+// .header {
+//   z-index: z(header); // 1
+// }
+// .child {
+//   z-index: z(child); // 3
+// }
+// .child-foo {
+//   z-index: z(child, second); // 2
+// }
+// 【参考】https://qiita.com/kojika17/items/b4694e3afe0da97e6335
+
+.l-header {
+  z-index: z(header);
+}
+.l-container {
+  z-index: z(base);
+}
+.l-container_main {
+  z-index: z(main);
+}
+.l-container_side {
+  z-index: z(side);
+}
+.l-footer {
+  z-index: z(footer);
+}

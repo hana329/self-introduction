@@ -1,0 +1,96 @@
+//フォント ---------------------------------
+
+//ゴシック
+$gothic: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro',
+  'メイリオ', 'Meiryo', sans-serif;
+// 明朝
+$mincho: '游明朝', YuMincho, 'Noto Serif JP', 'ヒラギノ明朝 ProN W3',
+  'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', 'ＭＳ 明朝', serif;
+
+//色 -------------------------------------
+$blue: #3f80e0;
+$yellow: #ffde74;
+$black: #0f0f0f;
+$white: #fff;
+$grey: #f5f5f5;
+$brown: #330c00;
+$brown02: #a38572;
+$brown03: #6a1d00;
+$red: #a12a2a;
+// $brown04: #ded6d4;
+
+$main-c: $blue; //メインカラー
+$bace-c: $grey; //ベースカラー
+$accent-c: $yellow; //アクセントカラー
+$bg-c: $grey;
+
+//コンテンツ幅 ----------------------------
+$content-width: 1000px;
+//ブロック間余白 --------------------------
+$block-padding: 30px;
+$block-padding_pc: 60px;
+
+//ヘッダー高さ --------------------------
+$header-height: 70px;
+$header-height_pc: 120px;
+
+//ベースフォントサイズ ---------------------
+$base-font-size: 16;
+
+//ブレークポイント ------------------------
+// $win-xs: 320px;//スマホ（小）iphone SEなど
+// $win-sm: 500px;//スマホ
+// $win-md: 768px;// タブレット（小）
+// $win-sub: 832px;// タブレット（中）　ipad
+// $win-lg: 1024px;// タブレット（大）ipad pro
+// $win-xl: 1200px;// PC コンテンツ幅のmax-width
+
+$win_xs: 320px; // スマホ（小）iphone SEなど
+$win_ss: 500px;
+$win_s: 768px; // SP ~ tab
+$win_m: 1024px; // tab ~ PC
+$win_l: $content-width; // PC版コンテンツ幅
+
+$breakpoints: (
+  'sp': 'screen and (min-width:' +
+    (
+      $win_xs + 1,
+    )+ ')',
+  'sp_up': 'screen and (min-width:' +
+    (
+      $win_ss + 1,
+    )+ ')',
+  'tab': 'screen and (min-width:' +
+    (
+      $win_s + 1,
+    )+ ')',
+  'pc': 'screen and (min-width:' +
+    (
+      $win_m + 1,
+    )+ ')',
+  'cont': 'screen and (min-width:' +
+    (
+      $win_l + 1,
+    )+ ')',
+) !default;
+
+@mixin mq($breakpoint: tab) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+// @include mq(){}
+
+// z-index管理
+// $z-index-elements:(
+//   base,
+//   main,
+//   header,
+// 　side,
+//   overlay,
+// 　modal,
+// 　loading,
+// );
+// @function z-index($name){
+//   @return index($z-index-elements,$name)
+// }

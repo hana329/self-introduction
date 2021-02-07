@@ -1,0 +1,13 @@
+@charset "UTF-8";
+// @import './foundation/var';
+/*-----------ベース -----------*/
+@import './foundation/var'; //変数の定義
+@import './foundation/mixin';
+@import './foundation/function';
+@import './foundation/reset';
+@import './foundation/base';
+@import './foundation/zindex';
+
+@import './layout';
+@import './component';
+@import './project';

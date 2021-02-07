@@ -1,0 +1,89 @@
+html {
+  font-size: $base-font-size + px;
+  text-underline-position: under;
+  // scroll-behavior: smooth;
+}
+body {
+  font-family: $gothic;
+  font-weight: 500;
+  line-height: 1.75;
+  width: 100vw;
+  overflow-x: hidden;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'palt';
+  font-size: rem(14);
+  @include mq() {
+    font-size: rem(16);
+  }
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+span,
+i {
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+p {
+  color: $black;
+}
+button {
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  &:focus {
+    opacity: 0.6;
+    // border: 1px solid $border-c;
+  }
+}
+/*-------フォントサイズ---------*/
+// p,dt,dd,
+// tr,th,td,
+// li,a{font-size:rem(14);}
+h1,
+h2,
+h3,
+h4 {
+  font-family: $mincho;
+}
+h2 {
+  font-size: rem(16);
+}
+
+@include mq() {
+  // body,p,dt,dd,
+  // tr,th,td,
+  // li,a{font-size:rem(16);}
+  h2 {
+    font-size: rem(20);
+  }
+  h3 {
+    font-size: rem(20);
+  }
+  h4 {
+    font-size: rem(18);
+  }
+  h5 {
+    font-size: rem(17);
+  }
+}
+
+// ::-webkit-scrollbar {
+//   display: none;
+//   -webkit-appearance: none;
+//   appearance: none;
+// }

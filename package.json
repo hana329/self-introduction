@@ -1,0 +1,24 @@
+{
+  "name": "self-introduction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "browser-sync start --server --files *"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hana329/self-introduction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hana329/self-introduction/issues"
+  },
+  "homepage": "https://github.com/hana329/self-introduction#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12"
+  }
+}

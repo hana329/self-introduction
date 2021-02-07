@@ -1,0 +1,38 @@
+// シャドウ
+@mixin shadow {
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+// 疑似要素用
+@mixin ba {
+  content: '';
+  display: inline-block;
+}
+// センタリング
+@mixin ab_c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin tate {
+  writing-mode: vertical-rl;
+}
+@mixin text-inherit {
+  text-align: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+@mixin gradient {
+  background-image: linear-gradient(to left, #dbdbdb, #ededed);
+}
+
+@mixin gradient-a {
+  background-image: linear-gradient(
+    to top,
+    rgba($grey02, 0.6),
+    rgba($grey05, 0.2)
+  );
+}
