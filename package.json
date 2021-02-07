@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "browser-sync start --server --files *"
+    "s": "browser-sync start --proxy http://localhost/MIZUKI/self-introduction/src/ --files *"
   },
   "repository": {
     "type": "git",
